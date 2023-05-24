@@ -3,8 +3,8 @@ plugins {
 }
 
 sourceCompatibility = 11
-compileJava.options.encoding = "UTF=8"
-compileTestJava.options.encoding = "UTF=8"
+//compileJava.options.encoding = "UTF=8"
+//compileTestJava.options.encoding = "UTF=8"
 
 
 group = "ru.netology"
@@ -15,12 +15,9 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
-
-
+    testImplementation 'junit:junit:4.13'
 }
 
-tasks.test {
-    useJUnitPlatform()
+test {
+    useJUnit()
 }
